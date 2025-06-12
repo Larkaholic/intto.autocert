@@ -1,6 +1,11 @@
 import React from "react";
 
 function LoginPage() {
+  const goToCertificateBuilder = (e) => {
+    e.preventDefault();
+    window.location.href = "/certificate-builder";
+  };
+
   return (
     <div className="relative flex flex-col items-center justify-center bg-gradient-to-tr from-[#000000] from-35% to-[#00691c] min-h-screen overflow-hidden">
       <img
@@ -14,7 +19,7 @@ function LoginPage() {
           <div className="flex w-full mb-6 sm:mb-10 rounded-xl justify-start">
             <img src="/images/inttoLogo.png" alt="InTTO Logo" className="inttologo w-24 sm:w-32 md:w-40" />
           </div>
-          <form className="flex flex-col space-y-4 sm:space-y-6" id="loginForm">
+          <form className="flex flex-col space-y-4 sm:space-y-6" id="loginForm" onSubmit={goToCertificateBuilder}>
             <div>
               <label htmlFor="email" className="block text-center text-base sm:text-xl font-bold text-white">
                 USERNAME
