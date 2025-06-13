@@ -1,16 +1,16 @@
-import { useState } from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import LoginPage from './pages/LoginPage'
-import CertificateBuilder from './pages/CertificateBuilder'
+import React from "react"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import LoginPage from "./pages/LoginPage"
+import FormBuilder from "./pages/FormBuilder"
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <Routes>
         <Route path="/" element={<LoginPage />} />
-        <Route path="/certificate-builder" element={<CertificateBuilder />} />
+        <Route path="/form-builder" element={<FormBuilder />} />
       </Routes>
-    </BrowserRouter>
+    </Router>
   )
 }
 

@@ -4,7 +4,7 @@ function FormBuilder() {
     return (
     <div className="flex">
         <div className="glass flex flex-col justify-between p-8 mt-8 ml-8 max-w-xs rounded-xl h-[90vh]">
-        <div>
+        <div className="">
             <div className="mb-10">
             <img src="/images/inttoLogo.png" alt="into logo" className="w-32 h-auto" />
             <div className="text-xs text-white mt-2 ml-1">Innovation & Technology Transfer Office</div>

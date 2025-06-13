@@ -1,9 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function LoginPage() {
-  const goToCertificateBuilder = (e) => {
+  const navigate = useNavigate();
+
+  const goTocertificateBuilder = (e) => {
     e.preventDefault();
-    window.location.href = "/certificate-builder";
+    navigate("/certificate-builder");
   };
 
   return (
@@ -19,7 +22,7 @@ function LoginPage() {
           <div className="flex w-full mb-6 sm:mb-10 rounded-xl justify-start">
             <img src="/images/inttoLogo.png" alt="InTTO Logo" className="inttologo w-24 sm:w-32 md:w-40" />
           </div>
-          <form className="flex flex-col space-y-4 sm:space-y-6" id="loginForm" onSubmit={goToCertificateBuilder}>
+          <form className="flex flex-col space-y-4 sm:space-y-6" id="loginForm" onSubmit={goTocertificateBuilder}>
             <div>
               <label htmlFor="email" className="block text-center text-base sm:text-xl font-bold text-white">
                 USERNAME
